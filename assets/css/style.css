@@ -177,7 +177,9 @@ footer.site-footer {
 
 .about {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 1.75rem;
 }
 
@@ -188,24 +190,17 @@ footer.site-footer {
 .about-text {
   flex: 1;
   min-width: 0;
+  max-width: 640px;
 }
 
 .headshot {
-  width: 200px;
-  height: 200px;
+  width: min(1000px, 90vw);
+  height: min(1000px, 90vw);
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border);
   display: block;
   flex-shrink: 0;
-}
-
-@media (max-width: 480px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 }
 
 .resume-section {
