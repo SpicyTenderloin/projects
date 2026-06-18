@@ -194,8 +194,8 @@ footer.site-footer {
 }
 
 .headshot {
-  width: min(1000px, 90vw);
-  height: min(1000px, 90vw);
+  width: min(500px, 45vw);
+  height: min(500px, 45vw);
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border);
