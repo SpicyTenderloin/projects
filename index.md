@@ -3,6 +3,7 @@ layout: default
 ---
 
 <section class="about">
+  <img src="{{ "/assets/img/headshot.jpg" | relative_url }}" alt="Julian Williams" class="headshot">
   <h2>About Me</h2>
   <p>
     I'm an undergraduate Electrical &amp; Aerospace Engineering student at

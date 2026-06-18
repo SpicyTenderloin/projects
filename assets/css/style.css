@@ -179,6 +179,16 @@ footer.site-footer {
   margin-top: 0;
 }
 
+.headshot {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
 .resume-section {
   margin-bottom: 2.5rem;
 }
