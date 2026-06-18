@@ -1,5 +1,6 @@
 - title: "Undergraduate Avionics Engineer"
   organization: "Praxis Aerospace"
+  logo: "/assets/img/logos/praxis-aerospace.png"
   start: "2026"
   end: "Present"
   bullets:
@@ -8,6 +9,7 @@
 
 - title: "UAS Program Lead"
   organization: "QUT Aerospace Society (QUTAS)"
+  logo: "/assets/img/logos/qutas.png"
   start: "2025"
   end: "Present"
   bullets:
@@ -16,6 +18,7 @@
 
 - title: "Executive & Project Lead"
   organization: "Electrical Engineering Student Society (EESS), QUT"
+  logo: "/assets/img/logos/eess.png"
   start: "2024"
   end: "Present"
   bullets:
@@ -24,6 +27,7 @@
 
 - title: "Battery Repair Technician"
   organization: "Second Life Battery Sales, Brisbane CBD"
+  logo: "/assets/img/logos/second-life-battery.jpg"
   start: "2022"
   end: "2026"
   bullets:
@@ -39,7 +43,9 @@
     - "Built strong technical communication skills by breaking complex concepts into clear explanations for different learners."
 
 - title: "Motorcycle Mechanic"
-  organization: "Tavener Motorsports, Newstead"
+  organization: "Taverner Motorsports, Newstead"
+  logo: "/assets/img/logos/taverner-motorsports.svg"
+  logo_invert: true
   start: "2022"
   end: "2022"
   bullets:
@@ -47,6 +53,7 @@
 
 - title: "Apprentice Motorcycle Mechanic"
   organization: "Teammoto Northside, Enoggera"
+  logo: "/assets/img/logos/teammoto.png"
   start: "2018"
   end: "2021"
   bullets:
@@ -55,6 +62,7 @@
 
 - title: "Retail Assistant"
   organization: "Bunnings Warehouse, Albion"
+  logo: "/assets/img/logos/bunnings.png"
   start: "2014"
   end: "2018"
   bullets:

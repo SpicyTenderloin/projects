@@ -213,12 +213,50 @@ footer.site-footer {
 }
 
 .resume-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
 }
 
 .resume-entry:last-child {
   border-bottom: none;
+}
+
+.resume-entry-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-logo-badge {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.resume-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logo-invert {
+  filter: invert(1);
+}
+
+@media (max-width: 480px) {
+  .resume-logo-badge {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .resume-entry-header {
