@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="project-grid">
+{% for project in site.projects %}
+  <article class="project-card">
+    <a class="card-link" href="{{ project.url | relative_url }}">
+      <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
+      <div class="card-body">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+      </div>
+    </a>
+  </article>
+{% endfor %}
+</div>
