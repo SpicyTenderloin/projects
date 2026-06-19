@@ -11,9 +11,9 @@ skills:
   - Kalman Filtering
 ---
 
-**Task:** design a digital control system to hold a magnetic levitation (maglev) module at a stable height. The system is open-loop unstable and strongly nonlinear, so it has to be actively controlled at all times to stop the levitating carriage from dropping onto the track.
+**Task:** design a digital control system to hold a magnetic levitation (maglev) module at a stable height. The system is open-loop unstable and strongly nonlinear, so it has to be actively controlled at all times to stop the levitating carriage from dropping onto the track. The brief called for a fast settling time with very little overshoot, since a real maglev carriage that overshoots risks striking the track.
 
-**Approach:** modelled the system's nonlinear dynamics from first principles and linearised them around a practical operating point, then designed a discrete-time full-state feedback controller with integral action to meet a fast, low-overshoot response specification. Since the real system can only measure position, a Kalman filter observer was designed to estimate the remaining states (velocity and coil current) from that single measurement. The full design was validated in Simulink against a realistic nonlinear plant model with sensor noise, process noise, and disturbances included.
+**Approach:** modelled the system's nonlinear dynamics from first principles, then swept the operating range to understand how the power needed to hold the carriage up, and how stiff the dynamics become, both change with height. That sweep is what informed the choice of a practical linearisation point rather than just picking one arbitrarily. From there I designed a discrete-time full-state feedback controller with integral action to meet the settling-time and overshoot spec. Since the real system can only measure position, a Kalman filter observer was layered on top to estimate the remaining states (velocity and coil current) from that single measurement. The full design was validated in Simulink against a realistic nonlinear plant model with sensor noise, process noise, and disturbances included, not just the simplified linear model used for the design itself.
 
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/simulink-model.jpg" | relative_url }}">
@@ -22,7 +22,14 @@ skills:
   <figcaption>Simulink model of the maglev system used for validation</figcaption>
 </figure>
 
-**Outcome:** the controller settled in under two seconds with about 2% overshoot, tracked reference heights well beyond the nominal operating point, and successfully rejected a large disturbance impulse without the carriage contacting the track. The observer tracked the true system states closely even with noise present, confirming the design was viable for an embedded implementation.
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/system-characteristics.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/system-characteristics.jpg" | relative_url }}" alt="Power consumption, pole locations, and stiffness across the operating range, used to choose the linearisation point">
+  </a>
+  <figcaption>Power consumption, pole locations, and stiffness across the operating range, used to choose where to linearise the system</figcaption>
+</figure>
+
+**Outcome:** the controller settled in under two seconds with about 2% overshoot, comfortably inside spec, and tracked reference heights well beyond the nominal operating point before the nonlinearity broke down the linear model's validity. It also successfully rejected a large disturbance impulse (equivalent to a sudden 10kN force on the carriage) without ever letting it contact the track. The observer tracked the true system states closely even with realistic sensor and process noise present, confirming the design was viable for an embedded implementation running at 50Hz.
 
 <div class="gallery">
   <figure>
@@ -30,6 +37,12 @@ skills:
       <img src="{{ "/assets/img/digital-lqr-maglev-controller/step-response.jpg" | relative_url }}" alt="Closed-loop step response, position and velocity">
     </a>
     <figcaption>Closed-loop step response, position and velocity</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}" alt="Controller tracking a large reference step on the full nonlinear plant">
+    </a>
+    <figcaption>Tracking a large reference step on the full nonlinear plant, not just the linearised model</figcaption>
   </figure>
   <figure>
     <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/kalman-filter-performance.jpg" | relative_url }}">
