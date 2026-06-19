@@ -5,10 +5,23 @@ layout: default
   <a class="back-link" href="{{ "/projects/" | relative_url }}">&larr; Back to all projects</a>
   <h1>{{ page.title }}</h1>
 
+  {% if page.skills %}
+  <ul class="skill-tags">
+    {% for skill in page.skills %}
+    <li><a class="skill-tag" href="{{ "/skills/" | relative_url }}#{{ skill | slugify }}">{{ skill }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
   {% if page.gallery %}
   <div class="gallery">
     {% for img in page.gallery %}
-    <img src="{{ img | relative_url }}" alt="{{ page.title }}">
+    <figure>
+      <a class="lightbox-trigger" href="{{ img.src | relative_url }}">
+        <img src="{{ img.src | relative_url }}" alt="{{ img.caption | default: page.title }}">
+      </a>
+      {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+    </figure>
     {% endfor %}
   </div>
   {% endif %}
