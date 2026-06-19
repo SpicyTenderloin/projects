@@ -12,7 +12,7 @@ skills:
 
 **Task:** as part of a small team, design a super-heterodyne RF receiver covering 3 to 5 GHz against a client-style specification: defined channel bandwidth, image and spurious signal rejection, sensitivity, and signal-to-noise ratio.
 
-**Approach:** the design uses a two-stage down-conversion architecture, mixing the incoming signal down to an intermediate frequency in two steps to balance image rejection against selectivity. The full 3 to 5 GHz band is split into four channels, each with its own preselection filter switched in ahead of the first mixer. I focused on the conceptual design and the MATLAB-based verification work, modelling the mixer's output spectrum for every channel across the local oscillator's tuning range to check unwanted spurious products always stayed clear of the intermediate frequency, and confirming the design against the link budget (sensitivity, dynamic range, and SNR) using hand calculations cross-checked in MATLAB.
+**Approach:** the design uses a two-stage down-conversion architecture, mixing the incoming signal down to an intermediate frequency in two steps to balance image rejection against selectivity. The full 3 to 5 GHz band is split into four channels, each with its own preselection filter switched in ahead of the first mixer. My own focus was the conceptual design and the MATLAB analysis underpinning it, specifically choosing the intermediate frequency and modelling the spurious products a real mixer produces, described in more detail below.
 
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/super-heterodyne-receiver/architecture-diagram.png" | relative_url }}">
@@ -20,6 +20,16 @@ skills:
   </a>
   <figcaption>Super-heterodyne receiver architecture: filter bank, two mixer stages, local oscillators, and IF filters</figcaption>
 </figure>
+
+## Finding the right intermediate frequency
+
+Before any components could be chosen, the design needed an intermediate frequency (IF) that kept the system's two biggest threats, the image band and third-order mixer spurs, as far away from the IF as possible. I wrote a MATLAB script that swept a wide range of candidate IFs and, for each one, calculated how far the image band sat from the desired signal and how close the nearest problematic third-order spur band landed to the IF itself, across every channel in the band. Rather than eyeballing a frequency plan, this turned IF selection into a proper search: the script picked out the candidate that maximised the worst-case distance on both fronts simultaneously, which is what actually drove the final choice of IF used throughout the rest of the design.
+
+## Modelling spurious mixer products
+
+A real mixer isn't a perfect multiplier, it produces a forest of unwanted intermodulation products alongside the wanted down-converted signal. I wrote a function that models a mixer's first, second, and third-order products (the familiar family of terms like the difference and sum frequencies, and their second harmonics, that fall out of a nonlinear mixer) given an amplifier's output spectrum and a local oscillator frequency, then plots where every one of them lands relative to the IF. I ran this for the local oscillator at both ends of its tuning range, on every channel, to confirm no spur could ever drift onto the IF and corrupt the down-converted signal, no matter which channel was selected. The plots further down this page, showing first, second, and third-order products spread across the spectrum relative to the IF marker, are the direct output of this analysis.
+
+These two pieces, the IF search and the spurious-product model, are what the rest of the receiver's architecture and component choices were built around.
 
 **Outcome:** the verified design met every target in the specification: a minimum discernible signal of -98 dBm, output SNR well above the 3 dB demodulator requirement across the full input power range, and a dynamic range of close to 40 dB. The spurious-response analysis below confirms the unwanted mixer products stay clear of the intermediate frequency at both ends of the lowest channel's local oscillator tuning range, and the same held across the other three channels right up to the top of the band.
 
