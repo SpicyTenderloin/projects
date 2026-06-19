@@ -15,12 +15,20 @@ skills:
 
 **Approach:** the design cascades four op-amp stages: a microphone interface stage, a buffer/pre-amplifier, a multi-stage anti-aliasing filter, and a final amplification stage. Component values for each stage were calculated using custom MATLAB scripts, then verified in LTspice simulation before being built and tested on a breadboard. A decoupling capacitor was added close to the op-amp's supply pins to deal with noise picked up through the power leads, the comparison below shows just how much cleaner the supply rail is with it in place. Bench measurements (bode plots and live transient captures) were compared back against the simulated predictions at every stage to validate the design.
 
-<figure>
-  <a class="lightbox-trigger" href="{{ "/assets/img/signal-preconditioning-circuit/breadboard-prototype.jpg" | relative_url }}">
-    <img src="{{ "/assets/img/signal-preconditioning-circuit/breadboard-prototype.jpg" | relative_url }}" alt="Breadboard prototype of the signal pre-conditioning circuit">
-  </a>
-  <figcaption>Breadboard prototype of the signal pre-conditioning circuit</figcaption>
-</figure>
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/signal-preconditioning-circuit/schematic.png" | relative_url }}">
+      <img src="{{ "/assets/img/signal-preconditioning-circuit/schematic.png" | relative_url }}" alt="Full circuit schematic, broken into its four cascaded op-amp stages">
+    </a>
+    <figcaption>Full schematic, broken into its four cascaded op-amp stages</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/signal-preconditioning-circuit/breadboard-prototype.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/signal-preconditioning-circuit/breadboard-prototype.jpg" | relative_url }}" alt="Breadboard prototype of the signal pre-conditioning circuit">
+    </a>
+    <figcaption>Breadboard prototype</figcaption>
+  </figure>
+</div>
 
 <div class="gallery">
   <figure>

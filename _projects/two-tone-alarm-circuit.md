@@ -14,12 +14,26 @@ skills:
 
 **Approach:** built the circuit around a hex Schmitt trigger IC configured as a pair of relaxation oscillators: one slow oscillator controls how often the tone switches, and a transistor switches an extra capacitor in and out of the second oscillator's feedback loop to flip between the two audible frequencies. An LED doubles as both the visual alarm indicator and the current-limiting element for the transistor's base, removing the need for an extra resistor. Component values were calculated from the datasheet's oscillator equations, then refined through LTspice simulation and bench testing, since the real IC behaviour didn't perfectly match the simplified datasheet model (the datasheet's oscillator constant assumes a fixed supply voltage that doesn't quite hold at 3V). The design was simulated in LTspice before being built and verified on a breadboard with an oscilloscope, checking the control oscillator frequency, the rising and falling edge tone switching, and the LED/transistor bias point all matched what was simulated.
 
-<figure>
-  <a class="lightbox-trigger" href="{{ "/assets/img/two-tone-alarm-circuit/breadboard-prototype.jpg" | relative_url }}">
-    <img src="{{ "/assets/img/two-tone-alarm-circuit/breadboard-prototype.jpg" | relative_url }}" alt="Breadboard prototype of the two-tone alarm circuit">
-  </a>
-  <figcaption>Breadboard prototype of the two-tone alarm circuit</figcaption>
-</figure>
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/two-tone-alarm-circuit/schematic.png" | relative_url }}">
+      <img src="{{ "/assets/img/two-tone-alarm-circuit/schematic.png" | relative_url }}" alt="Full circuit schematic of the two-tone alarm">
+    </a>
+    <figcaption>Full circuit schematic</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/two-tone-alarm-circuit/pcb-layout.png" | relative_url }}">
+      <img src="{{ "/assets/img/two-tone-alarm-circuit/pcb-layout.png" | relative_url }}" alt="PCB layout of the two-tone alarm">
+    </a>
+    <figcaption>PCB layout, sized to 50.8 x 36.8mm</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/two-tone-alarm-circuit/breadboard-prototype.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/two-tone-alarm-circuit/breadboard-prototype.jpg" | relative_url }}" alt="Breadboard prototype of the two-tone alarm circuit">
+    </a>
+    <figcaption>Breadboard prototype</figcaption>
+  </figure>
+</div>
 
 **Outcome:** the simulated and measured results matched closely. The image below compares the LTspice simulation of the buzzer tone switching (left) against the same point measured on the real circuit with an oscilloscope (right), confirming the design worked as intended on real hardware, not just on paper.
 

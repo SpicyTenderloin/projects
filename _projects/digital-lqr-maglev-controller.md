@@ -2,7 +2,7 @@
 title: Digital LQR Maglev Controller
 description: Digital control system design for a magnetic levitation module, from QUT's Modern Control unit.
 category: university
-thumbnail: /assets/img/digital-lqr-maglev-controller/step-response.jpg
+thumbnail: /assets/img/digital-lqr-maglev-controller/maglev-train.jpg
 skills:
   - MATLAB
   - Simulink
@@ -12,6 +12,13 @@ skills:
 ---
 
 **Task:** design a digital control system to hold a magnetic levitation (maglev) module at a stable height. The system is open-loop unstable and strongly nonlinear, so it has to be actively controlled at all times to stop the levitating carriage from dropping onto the track. The brief called for a fast settling time with very little overshoot, since a real maglev carriage that overshoots risks striking the track.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/maglev-train.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/maglev-train.jpg" | relative_url }}" alt="The Shanghai Transrapid maglev train, an example of the full-scale technology this lab-scale control problem relates to">
+  </a>
+  <figcaption>The Shanghai Transrapid, a full-scale maglev train (illustrative photo, not the lab-scale module this project actually controlled). Photo: Wikimedia Commons, CC BY-SA 3.0</figcaption>
+</figure>
 
 **Approach:** modelled the system's nonlinear dynamics from first principles, then swept the operating range to understand how the power needed to hold the carriage up, and how stiff the dynamics become, both change with height. That sweep is what informed the choice of a practical linearisation point rather than just picking one arbitrarily. From there I designed a discrete-time full-state feedback controller with integral action to meet the settling-time and overshoot spec. Since the real system can only measure position, a Kalman filter observer was layered on top to estimate the remaining states (velocity and coil current) from that single measurement. The full design was validated in Simulink against a realistic nonlinear plant model with sensor noise, process noise, and disturbances included, not just the simplified linear model used for the design itself.
 
