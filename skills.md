@@ -19,7 +19,7 @@ permalink: /skills/
   {% for skill in unique_skills %}
   {% assign matching = site.projects | where_exp: "p", "p.skills contains skill" %}
   <details id="{{ skill | slugify }}" class="skill-accordion">
-    <summary>{{ skill }}<span class="skill-count">{{ matching.size }} project{% if matching.size != 1 %}s{% endif %}</span></summary>
+    <summary><span class="skill-name">{{ skill }}</span><span class="skill-count">{{ matching.size }} project{% if matching.size != 1 %}s{% endif %}</span></summary>
     {% include project-grid.html projects=matching %}
   </details>
   {% endfor %}

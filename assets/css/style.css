@@ -356,11 +356,15 @@ footer.site-footer {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .skill-accordion summary::-webkit-details-marker {
   display: none;
+}
+
+.skill-name {
+  flex: 1;
+  min-width: 0;
 }
 
 .skill-accordion summary::after {
@@ -369,6 +373,8 @@ footer.site-footer {
   font-size: 1.3rem;
   margin-left: 1rem;
   flex-shrink: 0;
+  width: 1ch;
+  text-align: center;
 }
 
 .skill-accordion[open] summary::after {
@@ -379,6 +385,9 @@ footer.site-footer {
   color: var(--text-dim);
   font-weight: 400;
   font-size: 0.85rem;
+  flex-shrink: 0;
+  min-width: 6rem;
+  text-align: right;
   margin-left: 0.5rem;
 }
 
