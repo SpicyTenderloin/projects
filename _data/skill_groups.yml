@@ -1,0 +1,67 @@
+- name: Electrical & Electronics
+  skills:
+    - Analog Circuit Design
+    - Circuit Design
+    - PCB Design
+    - Op-Amp Design
+    - Filter Design
+    - LTspice
+    - Oscilloscope Testing
+    - Soldering
+    - Prototyping
+    - Power Electronics
+    - Thermal Analysis
+    - Reverse Engineering
+    - Embedded Systems
+
+- name: RF & Telecommunications
+  skills:
+    - RF Design
+    - RF
+    - Link Budget Analysis
+    - Mixer Design
+    - Telecommunications
+    - OFDM
+    - Channel Modelling
+    - Error Correction Coding
+
+- name: Control Systems
+  skills:
+    - Control Systems
+    - State-Space Modelling
+    - Kalman Filtering
+    - Simulink
+    - Motor Control
+
+- name: Software & Embedded
+  skills:
+    - Python
+    - Embedded C
+    - MATLAB
+    - PlatformIO
+    - State Machines
+    - Microcontrollers
+    - Image Processing
+    - Computer Vision
+    - Robotics
+
+- name: Aerospace & UAVs
+  skills:
+    - PX4
+    - Autopilot Systems
+    - UAV Systems
+    - Remote Sensing
+    - FPV
+    - Drone Building
+    - RC Aircraft
+    - Flight Testing
+    - Autonomous Systems
+
+- name: Mechanical & Fabrication
+  skills:
+    - Fusion 360
+    - CAD
+    - 3D Printing
+    - Mechanical Repair
+    - Wiring
+    - Troubleshooting

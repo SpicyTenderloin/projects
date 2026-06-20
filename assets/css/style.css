@@ -334,11 +334,19 @@ footer.site-footer {
   text-decoration: none;
 }
 
+.skill-group-heading {
+  margin: 2rem 0 0.5rem;
+}
+
+.skill-group-heading:first-of-type {
+  margin-top: 0;
+}
+
 .skills-list {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin: 1.5rem 0;
+  margin: 0 0 1.5rem;
 }
 
 .skill-accordion {
