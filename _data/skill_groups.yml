@@ -1,4 +1,4 @@
-- name: Electrical & Electronics
+- name: Electronic Design
   skills:
     - Analog Circuit Design
     - Circuit Design
@@ -17,7 +17,6 @@
 - name: RF & Telecommunications
   skills:
     - RF Design
-    - RF
     - Link Budget Analysis
     - Mixer Design
     - Telecommunications
@@ -64,4 +63,12 @@
     - 3D Printing
     - Mechanical Repair
     - Wiring
+
+- name: Transferable Skills
+  skills:
     - Troubleshooting
+    - Communication
+    - Problem Solving
+    - Teamwork
+    - Project Management
+    - Critical Thinking

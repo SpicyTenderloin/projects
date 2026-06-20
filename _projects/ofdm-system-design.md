@@ -9,6 +9,7 @@ skills:
   - OFDM
   - Channel Modelling
   - Error Correction Coding
+  - Teamwork
 ---
 
 **Task:** as part of a small team, design an OFDM (Orthogonal Frequency Division Multiplexing) system to a given set of parameters, then evaluate its performance under realistic wireless channel conditions including multipath fading and noise.

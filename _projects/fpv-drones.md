@@ -7,7 +7,7 @@ skills:
   - FPV
   - Soldering
   - Drone Building
-  - RF
+  - RF Design
 ---
 
 ## Tiny Whoops
