@@ -27,6 +27,13 @@ skills:
 
 Before any components could be chosen, the design needed an intermediate frequency (IF) that kept the system's two biggest threats, the image band and third-order mixer spurs, as far away from the IF as possible. I wrote a MATLAB script that swept a wide range of candidate IFs and, for each one, calculated how far the image band sat from the desired signal and how close the nearest problematic third-order spur band landed to the IF itself, across every channel in the band. Rather than eyeballing a frequency plan, this turned IF selection into a proper search: the script picked out the candidate that maximised the worst-case distance on both fronts simultaneously, which is what actually drove the final choice of IF used throughout the rest of the design.
 
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/super-heterodyne-receiver/if-sweep.png" | relative_url }}">
+    <img src="{{ "/assets/img/super-heterodyne-receiver/if-sweep.png" | relative_url }}" alt="Distance to the image band and distance to the nearest third-order spur band plotted against candidate IF, with the chosen IF marked at the crossover point">
+  </a>
+  <figcaption>Distance to the image band rises with IF while distance to the nearest spur band falls, the chosen IF sits right at the crossover where the worst-case distance is maximised</figcaption>
+</figure>
+
 ## Modelling spurious mixer products
 
 A real mixer isn't a perfect multiplier, it produces a forest of unwanted intermodulation products alongside the wanted down-converted signal. I wrote a function that models a mixer's first, second, and third-order products (the familiar family of terms like the difference and sum frequencies, and their second harmonics, that fall out of a nonlinear mixer) given an amplifier's output spectrum and a local oscillator frequency, then plots where every one of them lands relative to the IF. I ran this for the local oscillator at both ends of its tuning range, on every channel, to confirm no spur could ever drift onto the IF and corrupt the down-converted signal, no matter which channel was selected. The plots further down this page, showing first, second, and third-order products spread across the spectrum relative to the IF marker, are the direct output of this analysis.
