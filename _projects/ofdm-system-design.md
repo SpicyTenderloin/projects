@@ -2,7 +2,7 @@
 title: OFDM System Design
 description: Team-designed and simulated OFDM communications system, from QUT's Advanced Telecommunications unit.
 category: university
-thumbnail: /assets/img/ofdm-system-design/qam-constellation.jpg
+thumbnail: /assets/img/ofdm-system-design/orthogonal-subcarriers.png
 skills:
   - MATLAB
   - Telecommunications
@@ -15,6 +15,13 @@ skills:
 **Task:** as part of a small team, design an OFDM (Orthogonal Frequency Division Multiplexing) system to a given set of parameters, then evaluate its performance under realistic wireless channel conditions including multipath fading and noise.
 
 **Approach:** worked through the system's link-level parameters (subcarrier spacing, symbol duration, guard interval, bandwidth) before simulating the system end to end in MATLAB. This included modelling AWGN and Rayleigh fading channels, characterising a multipath channel's power delay profile to check the guard interval was actually long enough to absorb it, measuring bit-error-rate (BER) performance against theoretical curves to validate the simulation, and adding forward error correction (LDPC coding) to recover performance lost to fading.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/orthogonal-subcarriers.png" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/orthogonal-subcarriers.png" | relative_url }}" alt="Five OFDM subcarriers in the frequency domain, each a sinc-shaped spectrum peaking exactly where every other subcarrier crosses zero">
+  </a>
+  <figcaption>The core OFDM idea: each subcarrier's spectrum peaks exactly where every other subcarrier crosses zero, so they can overlap without interfering</figcaption>
+</figure>
 
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/channel-power-delay-profile.png" | relative_url }}">
