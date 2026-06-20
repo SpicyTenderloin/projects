@@ -8,6 +8,7 @@ skills:
   - MATLAB
   - Link Budget Analysis
   - Mixer Design
+  - Filter Design
   - Teamwork
 ---
 

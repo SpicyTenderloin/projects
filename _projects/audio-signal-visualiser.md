@@ -5,6 +5,8 @@ category: club
 thumbnail: /assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg
 skills:
   - Analog Circuit Design
+  - Op-Amp Design
+  - Filter Design
   - Embedded Systems
   - Soldering
 gallery:
