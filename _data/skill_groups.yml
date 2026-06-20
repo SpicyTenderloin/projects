@@ -1,5 +1,6 @@
 - name: Electronic Design
   skills:
+    - Electrical
     - Analog Circuit Design
     - Circuit Design
     - PCB Design
@@ -43,6 +44,8 @@
     - Image Processing
     - Computer Vision
     - Robotics
+    - ROS
+    - Linux
 
 - name: Aerospace & UAVs
   skills:
@@ -58,6 +61,7 @@
 
 - name: Mechanical & Fabrication
   skills:
+    - Fabrication
     - Fusion 360
     - CAD
     - 3D Printing
@@ -72,3 +76,4 @@
     - Teamwork
     - Project Management
     - Critical Thinking
+    - Systems Engineering

@@ -7,6 +7,9 @@ skills:
   - MATLAB
   - Control Systems
   - Motor Control
+  - Fabrication
+  - Electrical
+  - Troubleshooting
   - Teamwork
 ---
 
