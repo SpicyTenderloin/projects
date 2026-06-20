@@ -5,6 +5,7 @@ category: university
 skills:
   - Robotics
   - Computer Vision
+  - Image Processing
 ---
 
 More to come.
