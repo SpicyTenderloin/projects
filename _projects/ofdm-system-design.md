@@ -30,6 +30,26 @@ skills:
   <figcaption>Power delay profile of the multipath channel, plotted against the guard interval to confirm it was long enough to absorb the delay spread</figcaption>
 </figure>
 
+## Characterising the channel
+
+Before trusting any BER result from a fading channel simulation, I wanted to be sure the fading model itself was actually correct, not just plausible-looking. A flat Rayleigh fading channel is built from two independent Gaussian random variables treated as the real and imaginary parts of a complex channel gain, and the magnitude of that complex number is supposed to follow a Rayleigh distribution. Rather than taking that on faith, I generated a large number of samples from the simulated channel and compared their histogram against the theoretical Rayleigh probability density function. The close match confirmed the random channel generator was actually producing Rayleigh-distributed fading, not just noise that looked roughly right.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/rayleigh-envelope.png" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/rayleigh-envelope.png" | relative_url }}" alt="Histogram of simulated fading channel envelope amplitudes overlaid with the theoretical Rayleigh probability density function">
+  </a>
+  <figcaption>Simulated fading envelope statistics matching the theoretical Rayleigh distribution, validating the channel model before trusting any BER results built on top of it</figcaption>
+</figure>
+
+The multipath channel itself was also characterised in the frequency domain. Because the channel's delayed copies arrive with different phases at different frequencies, the channel doesn't attenuate every part of the signal's bandwidth equally, it has a frequency response with peaks and deep nulls across the occupied band. This frequency-selective behaviour is exactly why a single fading coefficient (flat fading) is only a valid simplification when the signal bandwidth is narrow compared to the channel's coherence bandwidth, and why OFDM's narrow subcarriers are useful here: each subcarrier is narrow enough to see a roughly flat slice of an otherwise frequency-selective channel.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/channel-frequency-response.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/channel-frequency-response.jpg" | relative_url }}" alt="Magnitude of the multipath channel's frequency response across the occupied bandwidth, showing deep frequency-selective nulls">
+  </a>
+  <figcaption>The multipath channel's frequency response across the occupied bandwidth, the deep nulls are why frequency-selective fading is a real concern and why each OFDM subcarrier needs to be narrow enough to see a roughly flat slice of it</figcaption>
+</figure>
+
 **Outcome:** the simulated BER closely tracked theoretical predictions for both AWGN and fading channels, validating the model. Multipath fading clearly degraded raw performance compared to AWGN, but adding LDPC coding recovered a large part of that gap, visibly pulling the coded curve back up toward the AWGN baseline rather than sitting on the uncoded fading curve. The constellation plots below show the same story visually: a received 64-QAM signal is badly scattered by fading and noise, then pulled back into clean, separable clusters once channel equalisation is applied.
 
 <div class="gallery">
