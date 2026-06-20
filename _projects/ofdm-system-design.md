@@ -50,25 +50,29 @@ The multipath channel itself was also characterised in the frequency domain. Bec
   <figcaption>The multipath channel's frequency response across the occupied bandwidth, the deep nulls are why frequency-selective fading is a real concern and why each OFDM subcarrier needs to be narrow enough to see a roughly flat slice of it</figcaption>
 </figure>
 
-**Outcome:** the simulated BER closely tracked theoretical predictions for both AWGN and fading channels, validating the model. Multipath fading clearly degraded raw performance compared to AWGN, but adding LDPC coding recovered a large part of that gap, visibly pulling the coded curve back up toward the AWGN baseline rather than sitting on the uncoded fading curve. The constellation plots below show the same story visually: a received 64-QAM signal is badly scattered by fading and noise, then pulled back into clean, separable clusters once channel equalisation is applied.
+**Outcome:** the simulated BER closely tracked theoretical predictions for both AWGN and fading channels, validating the model.
 
-<div class="gallery">
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/qam-constellation.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/ofdm-system-design/qam-constellation.jpg" | relative_url }}" alt="64-QAM constellation before and after channel equalisation">
-    </a>
-    <figcaption>64-QAM constellation before and after channel equalisation</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/ber-awgn-vs-fading.png" | relative_url }}">
-      <img src="{{ "/assets/img/ofdm-system-design/ber-awgn-vs-fading.png" | relative_url }}" alt="Simulated vs theoretical bit-error-rate for AWGN and fading channels">
-    </a>
-    <figcaption>Simulated vs theoretical bit-error-rate for AWGN and fading channels</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/ber-with-ldpc.png" | relative_url }}">
-      <img src="{{ "/assets/img/ofdm-system-design/ber-with-ldpc.png" | relative_url }}" alt="Bit-error-rate improvement after adding LDPC forward error correction">
-    </a>
-    <figcaption>Bit-error-rate improvement after adding LDPC forward error correction</figcaption>
-  </figure>
-</div>
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/ber-awgn-vs-fading.png" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/ber-awgn-vs-fading.png" | relative_url }}" alt="Simulated vs theoretical bit-error-rate for AWGN and fading channels">
+  </a>
+  <figcaption>Simulated vs theoretical bit-error-rate for AWGN and fading channels</figcaption>
+</figure>
+
+Multipath fading clearly degraded raw performance compared to AWGN, but adding LDPC coding recovered a large part of that gap, visibly pulling the coded curve back up toward the AWGN baseline rather than sitting on the uncoded fading curve.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/ber-with-ldpc.png" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/ber-with-ldpc.png" | relative_url }}" alt="Bit-error-rate improvement after adding LDPC forward error correction">
+  </a>
+  <figcaption>Bit-error-rate improvement after adding LDPC forward error correction</figcaption>
+</figure>
+
+The constellation plot below shows the same story visually: a received 64-QAM signal is badly scattered by fading and noise, then pulled back into clean, separable clusters once channel equalisation is applied.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/ofdm-system-design/qam-constellation.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/ofdm-system-design/qam-constellation.jpg" | relative_url }}" alt="64-QAM constellation before and after channel equalisation">
+  </a>
+  <figcaption>64-QAM constellation before and after channel equalisation</figcaption>
+</figure>

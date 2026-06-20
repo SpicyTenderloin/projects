@@ -7,9 +7,13 @@ skills:
   - Fusion 360
   - CAD
   - 3D Printing
-gallery:
-  - src: /assets/img/cad-modelling/CADModelling.jpg
-    caption: "3D-printed part test-fitted against the 3D printer"
 ---
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/cad-modelling/CADModelling.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/cad-modelling/CADModelling.jpg" | relative_url }}" alt="3D-printed part test-fitted against the 3D printer">
+  </a>
+  <figcaption>3D-printed part test-fitted against the 3D printer</figcaption>
+</figure>
 
 More to come.

@@ -11,12 +11,16 @@ skills:
   - Soldering
   - Python
   - PCB Design
-gallery:
-  - src: /assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg
-    caption: "Breadboard prototype showing live audio waveform on the display"
 ---
 
 Launched and lead this project with the Electrical Engineering Student Society (EESS) at QUT, giving members hands-on experience with analog circuit design and embedded systems.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg" | relative_url }}" alt="Breadboard prototype showing live audio waveform on the display">
+  </a>
+  <figcaption>Breadboard prototype showing live audio waveform on the display</figcaption>
+</figure>
 
 Beyond the breadboard prototype, I also designed a PCB for the project's signal pre-conditioning stage, the analog front end that conditions an incoming audio signal before it reaches the display.
 

@@ -37,15 +37,29 @@ One specific piece I built was the coverage path planner: a Python tool that gen
   <figcaption>Generated search pattern: waypoint path and overlapping camera footprints covering the flight area with no gaps</figcaption>
 </figure>
 
-**Outcome:** a working autonomous search-and-rescue demonstration: takeoff, a fully autonomous obstacle-avoiding search pattern, real-time onboard object detection, an autonomous diversion to the target, and a simulated aid delivery, all without manual piloting. The result came down to dedicated teamwork and structured planning across a large team more than any one person's individual contribution, which is the main thing I took from the project.
+**Outcome:** a working autonomous search-and-rescue demonstration: takeoff, a fully autonomous obstacle-avoiding search pattern, real-time onboard object detection, and an autonomous diversion to the target, all without manual piloting.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/autonomous-hover.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/search-and-rescue-uas/autonomous-hover.jpg" | relative_url }}" alt="The aircraft hovering autonomously inside the netted indoor test cage, with live telemetry visible on the ground control station display behind it">
+  </a>
+  <figcaption>Autonomous hover during an indoor test flight, ground control station display visible behind it</figcaption>
+</figure>
+
+The detection and planning side of this can be seen running live: the target detected and an occupancy grid path planned around obstacles in RViz, alongside the tmux session SSH'd into the onboard Pi showing the underlying ROS logs.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}" alt="RViz showing the detected target and occupancy grid with a planned path, next to a tmux session SSH'd into the onboard Pi showing live ROS logs">
+  </a>
+  <figcaption>RViz showing the detected target and occupancy grid with a planned path around obstacles, alongside a tmux session SSH'd into the onboard Pi</figcaption>
+</figure>
+
+The result came down to dedicated teamwork and structured planning across a large team more than any one person's individual contribution, which is the main thing I took from the project.
+
+## Gallery
 
 <div class="gallery">
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/autonomous-hover.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/search-and-rescue-uas/autonomous-hover.jpg" | relative_url }}" alt="The aircraft hovering autonomously inside the netted indoor test cage, with live telemetry visible on the ground control station display behind it">
-    </a>
-    <figcaption>Autonomous hover during an indoor test flight, ground control station display visible behind it</figcaption>
-  </figure>
   <figure>
     <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/aircraft-hardware.jpg" | relative_url }}">
       <img src="{{ "/assets/img/search-and-rescue-uas/aircraft-hardware.jpg" | relative_url }}" alt="The quadcopter on the test bench, showing the flight controller and companion computer mounted on the frame">
@@ -57,12 +71,6 @@ One specific piece I built was the coverage path planner: a Python tool that gen
       <img src="{{ "/assets/img/search-and-rescue-uas/gcs-terminal.jpg" | relative_url }}" alt="Ground control station terminal showing live ROS topic data during a test flight">
     </a>
     <figcaption>Ground control station terminal streaming live ROS topic data during a test flight</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}" alt="RViz showing the detected target and occupancy grid with a planned path, next to a tmux session SSH'd into the onboard Pi showing live ROS logs">
-    </a>
-    <figcaption>RViz showing the detected target and occupancy grid with a planned path around obstacles, alongside a tmux session SSH'd into the onboard Pi</figcaption>
   </figure>
   <figure>
     <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/team-photo.jpg" | relative_url }}">

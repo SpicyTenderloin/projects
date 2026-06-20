@@ -36,31 +36,38 @@ skills:
   <figcaption>Power consumption, pole locations, and stiffness across the operating range, used to choose where to linearise the system</figcaption>
 </figure>
 
-**Outcome:** the controller settled in under two seconds with about 2% overshoot, comfortably inside spec, and tracked reference heights well beyond the nominal operating point before the nonlinearity broke down the linear model's validity. It also successfully rejected a large disturbance impulse (equivalent to a sudden 10kN force on the carriage) without ever letting it contact the track. The observer tracked the true system states closely even with realistic sensor and process noise present, confirming the design was viable for an embedded implementation running at 50Hz.
+**Outcome:** the controller settled in under two seconds with about 2% overshoot, comfortably inside spec.
 
-<div class="gallery">
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/step-response.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/digital-lqr-maglev-controller/step-response.jpg" | relative_url }}" alt="Closed-loop step response, position and velocity">
-    </a>
-    <figcaption>Closed-loop step response, position and velocity</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}" alt="Controller tracking a large reference step on the full nonlinear plant">
-    </a>
-    <figcaption>Tracking a large reference step on the full nonlinear plant, not just the linearised model</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/kalman-filter-performance.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/digital-lqr-maglev-controller/kalman-filter-performance.jpg" | relative_url }}" alt="Kalman filter observer tracking the true plant states">
-    </a>
-    <figcaption>Kalman filter observer tracking the true plant states</figcaption>
-  </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/perturbation-response.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/digital-lqr-maglev-controller/perturbation-response.jpg" | relative_url }}" alt="Controller response to a large disturbance impulse">
-    </a>
-    <figcaption>Controller response to a large disturbance impulse</figcaption>
-  </figure>
-</div>
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/step-response.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/step-response.jpg" | relative_url }}" alt="Closed-loop step response, position and velocity">
+  </a>
+  <figcaption>Closed-loop step response, position and velocity</figcaption>
+</figure>
+
+It also tracked reference heights well beyond the nominal operating point before the nonlinearity broke down the linear model's validity.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/reference-tracking-test.jpg" | relative_url }}" alt="Controller tracking a large reference step on the full nonlinear plant">
+  </a>
+  <figcaption>Tracking a large reference step on the full nonlinear plant, not just the linearised model</figcaption>
+</figure>
+
+The controller also successfully rejected a large disturbance impulse (equivalent to a sudden 10kN force on the carriage) without ever letting it contact the track.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/perturbation-response.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/perturbation-response.jpg" | relative_url }}" alt="Controller response to a large disturbance impulse">
+  </a>
+  <figcaption>Controller response to a large disturbance impulse</figcaption>
+</figure>
+
+The observer tracked the true system states closely even with realistic sensor and process noise present, confirming the design was viable for an embedded implementation running at 50Hz.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/digital-lqr-maglev-controller/kalman-filter-performance.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/digital-lqr-maglev-controller/kalman-filter-performance.jpg" | relative_url }}" alt="Kalman filter observer tracking the true plant states">
+  </a>
+  <figcaption>Kalman filter observer tracking the true plant states</figcaption>
+</figure>

@@ -32,6 +32,8 @@ layout: default
       <a href="mailto:julianpwilliams07@gmail.com">julianpwilliams07@gmail.com</a>
       ·
       <a href="https://linkedin.com/in/jpw444">linkedin.com/in/jpw444</a>
+      ·
+      <a href="https://github.com/SpicyTenderloin">github.com/SpicyTenderloin</a>
     </p>
   </div>
 </section>

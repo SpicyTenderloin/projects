@@ -46,7 +46,7 @@ Beyond keeping spurs and the image away from the IF, the design had to actually 
 
 At the other end of the range, the limiting factor turned out to be the detector itself rather than any of the amplifiers or mixers, all of which had far more headroom before reaching their own compression points. To stop a strong input signal from overdriving the detector, an attenuator was placed late in the chain (just ahead of the final amplification stage) rather than at the front end, controlled by an automatic gain control loop that only engages once the signal crosses a threshold. Keeping the early stages un-attenuated preserves sensitivity for weak signals, while the attenuator protects the back end once a signal gets strong, stretching the usable dynamic range without sacrificing either extreme.
 
-**Outcome:** the verified design met every target in the specification: a minimum discernible signal of -98 dBm, output SNR well above the 3 dB demodulator requirement across the full input power range, and a dynamic range of close to 40 dB. The spurious-response analysis below confirms the unwanted mixer products stay clear of the intermediate frequency at both ends of the lowest channel's local oscillator tuning range, and the same held across the other three channels right up to the top of the band.
+**Outcome:** the verified design met every target in the specification: a minimum discernible signal of -98 dBm, output SNR well above the 3 dB demodulator requirement across the full input power range, and a dynamic range of close to 40 dB. The spurious-response analysis confirms the unwanted mixer products stay clear of the intermediate frequency at both ends of the lowest channel's local oscillator tuning range.
 
 <div class="gallery">
   <figure>
@@ -61,10 +61,13 @@ At the other end of the range, the limiting factor turned out to be the detector
     </a>
     <figcaption>Mixer output spurious products with the local oscillator at its minimum value</figcaption>
   </figure>
-  <figure>
-    <a class="lightbox-trigger" href="{{ "/assets/img/super-heterodyne-receiver/spurs-channel4-max.jpg" | relative_url }}">
-      <img src="{{ "/assets/img/super-heterodyne-receiver/spurs-channel4-max.jpg" | relative_url }}" alt="Mixer output spurious products for the top channel, with the local oscillator at its maximum value">
-    </a>
-    <figcaption>Same analysis repeated for the top channel of the band</figcaption>
-  </figure>
 </div>
+
+The same held across the other three channels right up to the top of the band.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/super-heterodyne-receiver/spurs-channel4-max.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/super-heterodyne-receiver/spurs-channel4-max.jpg" | relative_url }}" alt="Mixer output spurious products for the top channel, with the local oscillator at its maximum value">
+  </a>
+  <figcaption>Same analysis repeated for the top channel of the band</figcaption>
+</figure>

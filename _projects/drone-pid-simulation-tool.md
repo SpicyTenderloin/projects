@@ -14,3 +14,5 @@ skills:
 **Approach:** the tool models a quadcopter's attitude and altitude as a Simulink block diagram, paired with a MATLAB Live Script that lets a member interactively adjust the proportional, integral, and derivative gains and immediately see the effect on the simulated drone's step response. The goal is to make the connection between a PID gain and what it actually does to a real (simulated) system immediate and visual, rather than abstract.
 
 **Outcome:** currently a working Simulink model plus an interactive Live Script for tuning and visualising step response, the first building block toward a fuller teaching tool for the club. Still early days, more features (additional flight modes, a clearer guided walkthrough for members new to control theory) are planned.
+
+Code: [github.com/SpicyTenderloin/PID_simulation_tool](https://github.com/SpicyTenderloin/PID_simulation_tool)
