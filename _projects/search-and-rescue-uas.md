@@ -2,7 +2,7 @@
 title: Search and Rescue UAS
 description: A nine-person team's autonomous unmanned aircraft system for search and rescue, built over two semesters.
 category: university
-thumbnail: /assets/img/search-and-rescue-uas/autonomous-hover.jpg
+thumbnail: /assets/img/search-and-rescue-uas/drone-closeup.jpg
 skills:
   - UAV Systems
   - Autonomous Systems
@@ -18,6 +18,13 @@ skills:
 **Task:** as part of a nine-person team over two semesters, develop an unmanned aerial system capable of autonomously searching for a missing person, recognising them, and delivering aid, without a pilot in the loop once the mission started.
 
 **Approach:** I worked within the Autopilot and Navigation subsystem. A Pixhawk flight controller handled low-level flight control, talking to a Raspberry Pi companion computer over MAVLink, while the Pi ran ROS, a custom-trained YOLOv5 model over an OAK-D RGB-D camera feed for real-time object detection, and the mission logic tying it all together. The aircraft flew a planned search pattern from takeoff to landing entirely autonomously, avoiding obstacles marked in an occupancy grid. On a positive detection of the target mannequin, it would divert from its search pattern to deliver an EpiPen, streaming mission data back to a ground control station throughout. I came into the project with limited prior experience in ROS and Linux, and leaned on a systems engineering approach, breaking the navigation subsystem's requirements down into concrete, testable deliverables (calibrating the Pixhawk, verifying the Pi-to-flight-controller link, then building up to full autonomous flight) to get up to speed and contribute effectively alongside teammates who'd worked in this stack before.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/drone-closeup.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/search-and-rescue-uas/drone-closeup.jpg" | relative_url }}" alt="Close-up of the aircraft on the bench, with its companion computer, flight controller, and connectors visible">
+  </a>
+  <figcaption>The aircraft up close during bench testing</figcaption>
+</figure>
 
 ## Planning the search pattern
 
@@ -50,5 +57,17 @@ One specific piece I built was the coverage path planner: a Python tool that gen
       <img src="{{ "/assets/img/search-and-rescue-uas/gcs-terminal.jpg" | relative_url }}" alt="Ground control station terminal showing live ROS topic data during a test flight">
     </a>
     <figcaption>Ground control station terminal streaming live ROS topic data during a test flight</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/search-and-rescue-uas/gcs-visualisation.jpg" | relative_url }}" alt="RViz showing the detected target and occupancy grid with a planned path, next to a tmux session SSH'd into the onboard Pi showing live ROS logs">
+    </a>
+    <figcaption>RViz showing the detected target and occupancy grid with a planned path around obstacles, alongside a tmux session SSH'd into the onboard Pi</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/search-and-rescue-uas/team-photo.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/search-and-rescue-uas/team-photo.jpg" | relative_url }}" alt="The nine-person team, with the aircraft">
+    </a>
+    <figcaption>The team behind the project</figcaption>
   </figure>
 </div>
