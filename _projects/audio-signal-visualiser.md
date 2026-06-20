@@ -10,6 +10,7 @@ skills:
   - Embedded Systems
   - Soldering
   - Python
+  - PCB Design
 gallery:
   - src: /assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg
     caption: "Breadboard prototype showing live audio waveform on the display"
