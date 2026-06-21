@@ -427,3 +427,39 @@ a.lightbox-trigger {
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
+
+.step-viewer-wrapper {
+  margin: 1.5rem 0;
+}
+
+.step-viewer {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.step-viewer canvas {
+  display: block;
+}
+
+.step-viewer-status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+.step-viewer-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  text-align: center;
+}

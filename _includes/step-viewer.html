@@ -1,0 +1,5 @@
+<div class="step-viewer-wrapper">
+  <div class="step-viewer" data-step-src="{{ include.src | relative_url }}" style="height: {{ include.height | default: "400px" }};"></div>
+  {% if include.caption %}<p class="step-viewer-caption">{{ include.caption }}</p>{% endif %}
+</div>
+<script type="module" src="{{ "/assets/js/step-viewer.js" | relative_url }}"></script>
