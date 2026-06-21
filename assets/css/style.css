@@ -29,6 +29,26 @@ a:hover {
   text-decoration: underline;
 }
 
+main p a,
+main figcaption a {
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+
+main p a:hover,
+main figcaption a:hover {
+  text-decoration-color: var(--accent);
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 header.site-header {
   border-bottom: 1px solid var(--border);
   padding: 2rem 1.5rem 1.5rem;
@@ -163,6 +183,7 @@ footer.site-footer {
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin-top: 1rem;
 }
@@ -183,6 +204,26 @@ footer.site-footer {
 .site-nav a.active {
   color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+.site-nav a.nav-cv {
+  color: var(--bg);
+  background: var(--accent);
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border-bottom: none;
+}
+
+.site-nav a.nav-cv:hover {
+  color: var(--bg);
+  opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    gap: 0.75rem;
+  }
 }
 
 .text-dim {
