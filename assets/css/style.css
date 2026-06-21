@@ -258,6 +258,35 @@ footer.site-footer {
   max-width: 640px;
 }
 
+.toolkit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  list-style: none;
+  text-align: left;
+  font-size: 0.92rem;
+  color: var(--text-dim);
+}
+
+.toolkit-label {
+  display: inline-block;
+  min-width: 9.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .toolkit-label {
+    display: block;
+    min-width: 0;
+  }
+}
+
 .headshot {
   width: min(500px, 45vw);
   height: min(500px, 45vw);

@@ -27,6 +27,12 @@ layout: default
       fixed-wing platform for long-range observation and the society's new
       FPV drone racing program.
     </p>
+    <ul class="toolkit">
+      <li><span class="toolkit-label">UAS &amp; Systems</span>PX4, MAVLink, avionics integration, flight testing</li>
+      <li><span class="toolkit-label">RF &amp; Telecoms</span>RF receiver design, link budgets, OFDM, channel modelling</li>
+      <li><span class="toolkit-label">Controls</span>MATLAB, Simulink, LQR, Kalman filtering, motor modelling</li>
+      <li><span class="toolkit-label">Hardware &amp; Embedded</span>Analog design, PCB design, LTspice, Embedded C, Python</li>
+    </ul>
     <p>
       Get in touch:
       <a href="mailto:julianpwilliams07@gmail.com">julianpwilliams07@gmail.com</a>
