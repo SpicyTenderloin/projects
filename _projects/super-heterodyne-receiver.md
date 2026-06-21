@@ -10,6 +10,7 @@ skills:
   - Mixer Design
   - Filter Design
   - Teamwork
+  - Project Management
 ---
 
 **Task:** as part of a small team, design a super-heterodyne RF receiver covering 3 to 5 GHz against a client-style specification: defined channel bandwidth, image and spurious signal rejection, sensitivity, and signal-to-noise ratio.

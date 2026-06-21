@@ -11,6 +11,7 @@ skills:
   - Electrical
   - Troubleshooting
   - Teamwork
+  - Project Management
 ---
 
 **Task:** as part of a small team, design, simulate, build, and test a permanent magnet brushed DC motor from raw materials, scaled as a prototype for a small conveyor-belt drive. The brief set hard electrical, mechanical, and manufacturing constraints, including a rotational speed limit, a current limit, and a ban on commercial carbon or graphite motor brushes, so even the brushes had to be designed and built from scratch.

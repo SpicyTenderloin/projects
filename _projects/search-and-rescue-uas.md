@@ -13,6 +13,7 @@ skills:
   - Linux
   - Systems Engineering
   - Teamwork
+  - Project Management
 ---
 
 **Task:** as part of a nine-person team over two semesters, develop an unmanned aerial system capable of autonomously searching for a missing person, recognising them, and delivering aid, without a pilot in the loop once the mission started.

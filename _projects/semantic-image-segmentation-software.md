@@ -10,6 +10,7 @@ skills:
   - AI-Assisted Development
   - Python
   - Teamwork
+  - Project Management
 ---
 
 **Task:** as part of a small team, build and compare two contrasting approaches to image segmentation, a classical pixel-based method and a machine-learning model, then extend one of them to make use of depth-camera data, evaluating all of it against the SUN RGB-D and NYU Depth v2 benchmark datasets using IoU, Dice score, and pixel accuracy.

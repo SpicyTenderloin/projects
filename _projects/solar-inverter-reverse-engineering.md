@@ -9,6 +9,7 @@ skills:
   - Thermal Analysis
   - Reverse Engineering
   - Teamwork
+  - Project Management
 ---
 
 **Task:** as part of a small team, reverse engineer a commercial single-phase grid-connected solar inverter (a 5 kW ABB UNO string inverter), then analytically model and simulate its two power conversion stages to predict efficiency, losses, and thermal performance at real operating points.
