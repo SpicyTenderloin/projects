@@ -96,12 +96,20 @@ Wherever possible, I avoided gluing any avionics component directly to the airfr
 
 The RFD900x itself sits inside the avionics bay, but its two antennas couldn't stay in there with it. At 900MHz the antennas are physically long, too long to fit cleanly inside the airframe while keeping them properly orthogonal, the perpendicular spacing that gives a diversity link its actual benefit by covering for whichever antenna's polarisation happens to be in a null at any given moment. Mounting them inside the bay also put a 900MHz transmitter uncomfortably close to the rest of the avionics, a real interference risk for sensitive equipment like the GPS receivers sitting right next to it. I designed a custom mount that moves both antennas outside the avionics bay, keeping them properly orthogonal to each other and putting real distance between the transmitter and the rest of the electronics.
 
-<figure>
-  <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/external-antenna-and-sensor-mount.png" | relative_url }}">
-    <img src="{{ "/assets/img/believer-fixed-wing/external-antenna-and-sensor-mount.png" | relative_url }}" alt="Rear view of the Believer airframe, showing the externally-mounted telemetry antenna and the GPS/magnetometer mast on top of the fuselage">
-  </a>
-  <figcaption>The externally-mounted telemetry antenna and the GPS/magnetometer mast, both kept clear of the avionics bay</figcaption>
-</figure>
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/antenna-mount-cad-design.png" | relative_url }}">
+      <img src="{{ "/assets/img/believer-fixed-wing/antenna-mount-cad-design.png" | relative_url }}" alt="CAD render of the custom antenna mount: a knurled, threaded bulkhead fitting on a mounting bracket">
+    </a>
+    <figcaption>The custom mount, designed in CAD as a knurled, threaded bulkhead fitting</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/external-antenna-and-sensor-mount.png" | relative_url }}">
+      <img src="{{ "/assets/img/believer-fixed-wing/external-antenna-and-sensor-mount.png" | relative_url }}" alt="Rear view of the Believer airframe, showing the externally-mounted telemetry antenna and the GPS/magnetometer mast on top of the fuselage">
+    </a>
+    <figcaption>The externally-mounted telemetry antenna and the GPS/magnetometer mast, both kept clear of the avionics bay</figcaption>
+  </figure>
+</div>
 
 ## Commissioning the aircraft in QGroundControl
 
