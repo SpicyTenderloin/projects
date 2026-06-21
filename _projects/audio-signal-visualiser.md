@@ -31,6 +31,15 @@ Beyond the breadboard prototype, I also designed a PCB for the project's signal 
   <figcaption>3D render of the signal pre-conditioning circuit PCB I designed for the project</figcaption>
 </figure>
 
+I also designed a small custom PCB for the project's microphone front end, hand-assembling it with a hot-air reflow station to place and solder the SMD microphone IC.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/audio-signal-visualiser/reflow-microphone-pcb.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/audio-signal-visualiser/reflow-microphone-pcb.jpg" | relative_url }}" alt="An SMD microphone IC being reflow-soldered onto the custom microphone PCB using a hot-air rework station">
+  </a>
+  <figcaption>Reflow-soldering the microphone IC onto the custom microphone PCB</figcaption>
+</figure>
+
 ## Writing a tool to design the filter stage
 
 Picking real resistor and capacitor values for a multi-stage active filter is normally a tedious, manual process: you work out the ideal pole locations and Q factor for each stage, then hunt through standard component value tables trying to get close to them while keeping the op-amp gain stable. I wrote a Python tool to automate that search. Given a passband and stopband specification, it generates a Chebyshev-I prototype filter, decomposes it into cascaded Sallen-Key stages, then searches real E12, E24, or custom component series for values matching each stage's target frequency and Q factor, checking amplifier stability and calculating the non-inverting gain needed at every stage along the way.

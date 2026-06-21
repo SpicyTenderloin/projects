@@ -79,6 +79,12 @@ Wherever possible, I avoided gluing any avionics component directly to the airfr
     <figcaption>An early mounting layout, worked out on the bench before committing to the printed bay design</figcaption>
   </figure>
   <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/avionics-bay-empty.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/believer-fixed-wing/avionics-bay-empty.jpg" | relative_url }}" alt="The empty avionics bay built into the airframe, before any avionics are installed, with the tail antenna feed-through already in place">
+    </a>
+    <figcaption>The bay built into the airframe, ready for the avionics to go in</figcaption>
+  </figure>
+  <figure>
     <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/avionics-bay-current.jpg" | relative_url }}">
       <img src="{{ "/assets/img/believer-fixed-wing/avionics-bay-current.jpg" | relative_url }}" alt="The current avionics bay inside the airframe, labelled: flight computer (Pixhawk 6X), long range modem, radio receiver, and GPS 1">
     </a>
