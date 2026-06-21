@@ -67,9 +67,9 @@ Believer's documentation is run as a second brain for the project: a private Git
 
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/context-folder-structure.png" | relative_url }}">
-    <img src="{{ "/assets/img/believer-fixed-wing/context-folder-structure.png" | relative_url }}" alt="A context folder of standing directives, project notes, and a running change log, plus a supporting-document archive, the same pattern used to run Believer's own second brain">
+    <img src="{{ "/assets/img/believer-fixed-wing/context-folder-structure.png" | relative_url }}" alt="The Believer project's context folder: standing directives, project notes, and a running change log, plus a supporting-document archive">
   </a>
-  <figcaption>The same context-folder pattern in practice, on another of my projects: standing directives, project notes, and a running change log, alongside a supporting document archive</figcaption>
+  <figcaption>Believer's context folder: standing directives, project notes, and a running change log, alongside a supporting document archive</figcaption>
 </figure>
 
 That portability is the actual point, not speed for its own sake, though the speed is real too. The same standing directives that keep the documentation consistent also keep it honest: the AI is told explicitly to mark anything unconfirmed as TBD rather than guess, and to flag a judgment call rather than quietly make one. Every change to a parameter, a purchased part, or an interface definition gets logged with its reasoning at the time it happens, not reconstructed from memory weeks later, which is exactly how the PM06 V2 rejection and the ELRS channel remap above ended up as timestamped, reasoned entries in the project's own changelog and parameter log rather than half-remembered later. Used this way, AI assistance doesn't trade traceability for pace, it improves both at once, and that matters more on a project whose documentation people will eventually rely on to fly the aircraft safely.
