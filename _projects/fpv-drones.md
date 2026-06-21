@@ -5,6 +5,7 @@ category: personal
 thumbnail: /assets/img/fpv-drones/Soldering.jpg
 skills:
   - FPV
+  - FPV Acro Mode
   - Soldering
   - Drone Building
   - RF Design
