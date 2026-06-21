@@ -33,6 +33,7 @@
   bullets:
     - "Manufactured and repaired custom lithium battery packs: dismantling, reassembly, fault diagnosis, precision soldering, and nickel-strip spot-welding."
     - "Built strong attention to detail and safe-handling discipline working with lithium chemistry."
+    - "Designed and built a custom ESP32-based battery monitor to measure real discharge capacity and detect cell imbalance, to verify the quality of second-hand cells before resale."
 
 - title: "High School Mathematics Tutor"
   organization: "Private tutoring, Brisbane Inner West"

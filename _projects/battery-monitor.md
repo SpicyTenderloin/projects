@@ -1,6 +1,6 @@
 ---
 title: Battery Monitor
-description: An ESP32-based battery current/voltage monitor, with a live-logging Python GUI and a multi-point voltage tap harness.
+description: An ESP32-based battery current/voltage monitor built to verify the capacity and quality of second-hand battery cells.
 category: personal
 thumbnail: /assets/img/battery-monitor/discharge-test-plot.jpg
 skills:
@@ -14,7 +14,7 @@ skills:
   - Power Electronics
 ---
 
-**Task:** build a standalone tool for logging a battery's discharge current and voltage over time, accurate enough to actually trust for real battery testing rather than just a rough indication.
+**Task:** built while working at Second Life Battery Sales, where part of the job is judging whether a used battery is actually still good enough to resell. That call comes down to its real discharge capacity and cell health, not just a quick voltage check, so I built a standalone tool accurate enough to actually base a keep-or-reject decision on, rather than a rough indication.
 
 **Approach:** an ESP32 measures shunt current through an INA240A3 current-sense amplifier (100x gain, across a 0.5mΩ shunt) and streams readings to a PC over serial. On boot, the firmware measures and removes the ADC's own bias offset by averaging 300 samples before any load is connected, and a hard interlock in the firmware refuses to recalibrate while a test is running, so a test can't be invalidated by a stray recalibration mid-discharge. Every reported current value is itself an average of 100 ADC samples, and the firmware estimates its own expected measurement noise from first principles (quantisation noise plus an assumed ADC noise floor), so the achievable precision is known rather than just assumed.
 
@@ -29,7 +29,7 @@ A Python application on the PC side talks to the ESP32 over serial: it plots the
 
 ## A multi-point voltage tap harness
 
-Alongside the current-sense logging, I also designed an op-amp buffered voltage-tap harness: a resistor divider and a dedicated op-amp buffer for each of several tap points along the battery string, from roughly 8V up to 28V, so the same ADC can read voltage at multiple points across the pack rather than just the terminal voltage. Buffering each tap before the ADC keeps the divider's loading independent of whatever else is connected downstream, so adding the monitoring circuit doesn't itself disturb the voltage it's trying to measure.
+Total pack voltage alone can hide a problem: a pack can read a perfectly reasonable voltage overall while one cell group inside it is already weak, exactly the kind of defect that matters when judging whether a used pack is still sound. So alongside the current-sense logging, I also designed an op-amp buffered voltage-tap harness: a resistor divider and a dedicated op-amp buffer for each of several tap points along the battery string, from roughly 8V up to 28V, so the same ADC can read voltage at multiple points across the pack during charge and discharge, not just its terminal voltage, and catch an imbalanced cell group that the total voltage alone would miss. Buffering each tap before the ADC keeps the divider's loading independent of whatever else is connected downstream, so adding the monitoring circuit doesn't itself disturb the voltage it's trying to measure.
 
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/battery-monitor/voltage-tap-harness-schematic.jpg" | relative_url }}">
@@ -38,6 +38,6 @@ Alongside the current-sense logging, I also designed an op-amp buffered voltage-
   <figcaption>The voltage tap harness: a buffered resistor divider per tap point, each feeding its own ADC channel</figcaption>
 </figure>
 
-**Outcome:** a working two-part monitoring system: a calibrated ESP32 current logger with a real, validated discharge test behind it, and a multi-point voltage tap harness that extends the same idea to monitoring the pack at several points along its length, not just its terminal voltage.
+**Outcome:** a working two-part monitoring system: a calibrated ESP32 current logger with a real, validated discharge test behind it, giving an actual measured capacity to judge a used cell against, and a multi-point voltage tap harness that catches cell imbalance a single terminal-voltage reading would miss.
 
 Code: [github.com/SpicyTenderloin/battery_monitor](https://github.com/SpicyTenderloin/battery_monitor)
