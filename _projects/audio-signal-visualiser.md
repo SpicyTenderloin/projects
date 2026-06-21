@@ -15,6 +15,21 @@ skills:
 
 Launched and lead this project with the Electrical Engineering Student Society (EESS) at QUT, giving members hands-on experience with analog circuit design and embedded systems.
 
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/audio-signal-visualiser/what-is-it-slide.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/audio-signal-visualiser/what-is-it-slide.jpg" | relative_url }}" alt="Labelled diagram of the breadboard prototype: electret microphone, signal conditioning filter, microcontroller, and TFT LCD screen showing the live waveform">
+    </a>
+    <figcaption>What it is: microphone, signal conditioning filter, microcontroller, and live waveform display</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/audio-signal-visualiser/motivation-slide.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/audio-signal-visualiser/motivation-slide.jpg" | relative_url }}" alt="Motivation and inspiration slide: contributes to EESS, self-guided and collaborative, engaging interactive demonstrations, accessibility and scalability, signals processing, extends core units, hot-swappable and low-cost">
+    </a>
+    <figcaption>Why it exists: an engaging, low-cost, hot-swappable demo extending core signals-processing units for EESS members</figcaption>
+  </figure>
+</div>
+
 <figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg" | relative_url }}">
     <img src="{{ "/assets/img/audio-signal-visualiser/AudioSignalVisualiser.jpg" | relative_url }}" alt="Breadboard prototype showing live audio waveform on the display">
