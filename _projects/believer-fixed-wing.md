@@ -30,8 +30,8 @@ skills:
 **Approach:** the diagram below is the system block diagram from Believer's own interface control document, the full avionics architecture at a glance before the detail below unpacks each link.
 
 <figure>
-  <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/icd-block-diagram.svg" | relative_url }}">
-    <img src="{{ "/assets/img/believer-fixed-wing/icd-block-diagram.svg" | relative_url }}" alt="Believer ICD block diagram: the Pixhawk 6X at the centre, wired to the DBR4 receiver, RFD900x telemetry radio, M8N and ZED-F9P GPS modules, MS4525DO airspeed sensor, and PWM-driven control surfaces and motors, powered through the PM03D module from a 6S LiPo battery">
+  <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/icd-block-diagram-preview.png" | relative_url }}">
+    <img src="{{ "/assets/img/believer-fixed-wing/icd-block-diagram-preview.png" | relative_url }}" alt="Believer ICD block diagram: the Pixhawk 6X at the centre, wired to the DBR4 receiver, RFD900x telemetry radio, M8N and ZED-F9P GPS modules, MS4525DO airspeed sensor, and PWM-driven control surfaces and motors, powered through the PM03D module from a 6S LiPo battery">
   </a>
   <figcaption>Believer's ICD block diagram: the full avionics architecture in one view</figcaption>
 </figure>
