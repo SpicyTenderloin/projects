@@ -27,7 +27,16 @@ skills:
   <figcaption>The Believer fixed-wing drone, ready to fly, with ground control laptop and transmitter</figcaption>
 </figure>
 
-**Approach:** Believer is a V-tail, twin-motor airframe with two independently-servoed ailerons, built around a Holybro Pixhawk 6X flight controller running PX4. Each control surface and motor is mapped to its own PWM output, configured and verified directly in PX4's actuator setup.
+**Approach:** the diagram below is the system block diagram from Believer's own interface control document, the full avionics architecture at a glance before the detail below unpacks each link.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/icd-block-diagram.svg" | relative_url }}">
+    <img src="{{ "/assets/img/believer-fixed-wing/icd-block-diagram.svg" | relative_url }}" alt="Believer ICD block diagram: the Pixhawk 6X at the centre, wired to the DBR4 receiver, RFD900x telemetry radio, M8N and ZED-F9P GPS modules, MS4525DO airspeed sensor, and PWM-driven control surfaces and motors, powered through the PM03D module from a 6S LiPo battery">
+  </a>
+  <figcaption>Believer's ICD block diagram: the full avionics architecture in one view</figcaption>
+</figure>
+
+Believer is a V-tail, twin-motor airframe with two independently-servoed ailerons, built around a Holybro Pixhawk 6X flight controller running PX4. Each control surface and motor is mapped to its own PWM output, configured and verified directly in PX4's actuator setup.
 
 The long-range command link runs over an RFD900x radio modem, while the RC link pairs a Radiomaster GX12 transmitter with a DBR4 receiver over dual-band ExpressLRS, configured in Hybrid switch mode with MAVLink so RC control and telemetry share the one radio link without a second dedicated radio.
 
