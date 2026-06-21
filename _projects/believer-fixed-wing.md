@@ -155,6 +155,13 @@ The RFD900x itself sits inside the avionics bay, but its two antennas couldn't s
 
 Beyond wiring up the individual interfaces above, getting Believer flight-ready means working through PX4's full setup sequence in QGroundControl: selecting the airframe type, configuring the power module so the battery's cell count and voltage and current readings calibrate correctly, binding and verifying the RC receiver link, mapping every actuator output to its physical control surface or motor with the right direction, range, and trim, and setting up the motor outputs. Sensor calibration (accelerometer, gyroscope, compass, and airspeed) and a full RC and failsafe check follow before the aircraft is considered safe to fly. None of this is a one-off: per the project's own build checklist, the aircraft gets reconfigured and re-verified from scratch before each test flight rather than trusting a configuration that was last checked weeks earlier, which is exactly the kind of detail worth logging in the parameter change log above rather than re-discovering by trial and error each time.
 
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/early-ground-test-qgc.png" | relative_url }}">
+    <img src="{{ "/assets/img/believer-fixed-wing/early-ground-test-qgc.png" | relative_url }}" alt="QGroundControl's map view during an early ground test, showing GPS position acquired and the aircraft not yet armed in Manual mode">
+  </a>
+  <figcaption>An early ground test: GPS position acquired in QGroundControl, well before anything was flight-ready</figcaption>
+</figure>
+
 **Outcome:** establishing a redundant RC control link was the near-term goal in the original project proposal, and it's now done. Most of the maiden-flight build checklist is complete too: airframe, avionics mounting, pitot and magnetometer installation, antenna placement, and a parachute bay repair are all finished. What's left is mostly cosmetic (paint) and procedural (a final configuration and tuning pass, with a build log to document it), aside from one real hardware blocker: the RTK GPS module still needs its antenna fitted before centimetre-level positioning can come online. Flight controller tuning and expanded flight testing are next, with a companion computer and camera payload for onboard object detection planned further out.
 
 ## Building a second brain for the project

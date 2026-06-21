@@ -36,13 +36,21 @@ Acro mode has no self-levelling: the sticks command rotation rates directly, and
 
 ## SpeedyBee 5" Drone
 
-5-inch FPV quadcopter build using a SpeedyBee flight controller stack.
+5-inch FPV quadcopter build using a SpeedyBee F405 V4 flight controller stack, working from the board's own pinout reference to wire up the LED, VTX, and receiver connections correctly.
 
-<figure>
-  <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/Soldering.jpg" | relative_url }}">
-    <img src="{{ "/assets/img/fpv-drones/Soldering.jpg" | relative_url }}" alt="Soldering work on the SpeedyBee build">
-  </a>
-  <figcaption>Soldering work on the SpeedyBee build</figcaption>
-</figure>
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/f405-v4-pinout.png" | relative_url }}">
+      <img src="{{ "/assets/img/fpv-drones/f405-v4-pinout.png" | relative_url }}" alt="SpeedyBee F405 V4 flight controller pinout diagram, labelling the Betaflight LED, analog and DJI VTX, and SBUS pads">
+    </a>
+    <figcaption>The F405 V4's pinout, used as the wiring reference for this build</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/Soldering.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/fpv-drones/Soldering.jpg" | relative_url }}" alt="Soldering work on the SpeedyBee build">
+    </a>
+    <figcaption>Soldering work on the SpeedyBee build</figcaption>
+  </figure>
+</div>
 
 Build log and more photos coming soon.
