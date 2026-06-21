@@ -20,6 +20,15 @@ skills:
 
 ## MATLAB simulation and optimisation
 
+The motor's magnetic circuit (the permanent magnets, the air gap, and the steel pole pieces and back-iron that carry the flux between them) sets the flux linkage everything else depends on, treating it the same way as an electrical circuit, with magnetomotive force in place of EMF and reluctance in place of resistance.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/dc-motor/magnetic-flux-circuit.png" | relative_url }}">
+    <img src="{{ "/assets/img/dc-motor/magnetic-flux-circuit.png" | relative_url }}" alt="Magnetic circuit diagram of the two-pole permanent magnet machine, with the flux path through the magnets, air gap, and back-iron, and the magnetic-circuit equations relating flux, magnetomotive force, and reluctance">
+  </a>
+  <figcaption>The motor's magnetic circuit: flux driven by the magnets' magnetomotive force, limited by the reluctance of the magnets and air gap</figcaption>
+</figure>
+
 Wire gauge selection is a direct trade-off: thinner wire allows more turns in a fixed slot area (more flux linkage, more torque) but adds resistance and copper losses, while thicker wire does the opposite. I wrote a MATLAB script to sweep that trade-off properly rather than guess at it, and a second script to find the supply voltage that made the best use of the motor's available current limit during startup. The main simulation then modelled the motor's full transient response (current, torque, back-EMF, angular acceleration, speed, and power) using an adaptive ODE solver, swept across a range of possible air gap lengths, since the air gap has a direct effect on the motor constant and how stiff or fast the resulting machine would be.
 
 <figure>

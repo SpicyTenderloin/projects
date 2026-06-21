@@ -34,6 +34,15 @@ Acro mode has no self-levelling: the sticks command rotation rates directly, and
   <figcaption>Practicing acro-mode flying in a simulator before taking it to real hardware</figcaption>
 </figure>
 
+That practice carries straight over to real flying: the same acro inputs, now with a real digital HD FPV feed and OSD (voltage, GPS lock, link strength) instead of a simulated one.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/fpv-pov-flying.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/fpv-drones/fpv-pov-flying.jpg" | relative_url }}" alt="First-person view from a digital HD FPV system, OSD showing voltage, GPS lock, and link strength, looking down at the pilot on a porch">
+  </a>
+  <figcaption>The real thing: digital HD FPV feed and OSD, flying for real after practicing in the simulator</figcaption>
+</figure>
+
 ## SpeedyBee 5" Drone
 
 5-inch FPV quadcopter build using a SpeedyBee F405 V4 flight controller stack, working from the board's own pinout reference to wire up the LED, VTX, and receiver connections correctly.
