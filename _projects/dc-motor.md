@@ -72,6 +72,13 @@ The back-iron pole pieces were shaped by hand from steel pipe, cut longitudinall
 With the motor built, a drill was clamped to the output shaft and used to spin it as a generator, measuring the resulting voltage and speed at several points to back out the motor's real electromagnetic constant, the same way the simulation had predicted it in theory.
 
 <figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/dc-motor/test-bench-setup.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/dc-motor/test-bench-setup.jpg" | relative_url }}" alt="The full test bench: oscilloscopes and a multimeter wired up to the motor rig, with a drill clamped to its shaft">
+  </a>
+  <figcaption>The test bench: oscilloscopes and a multimeter recording voltage and speed while a drill spins the motor as a generator</figcaption>
+</figure>
+
+<figure>
   <a class="lightbox-trigger" href="{{ "/assets/img/dc-motor/motor-constant-derivation.jpg" | relative_url }}">
     <img src="{{ "/assets/img/dc-motor/motor-constant-derivation.jpg" | relative_url }}" alt="A drill clamped to the motor's shaft, spinning it as a generator to measure voltage and speed">
   </a>

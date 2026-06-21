@@ -60,7 +60,22 @@ Both modems expose these settings two ways: through RFDesign's own configuration
 
 ## A modular, glue-free avionics bay
 
-Wherever possible, I avoided gluing any avionics component directly to the airframe. Glue is a permanent fix to what is, at this stage, still an iterative design: the avionics suite is going to keep growing and changing as the project moves from maiden flight through tuning and into the companion-computer phase, and every glued-down module is damage to the airframe that has to be undone, or lived with, the next time something changes. Instead I designed a custom 3D-printed avionics bay that mounts the flight controller, GPS modules, telemetry radio, and power module mechanically, with no adhesive anywhere. That keeps the whole suite modular: a future sensor or companion computer can be added, and an existing module swapped or repositioned, by adjusting or reprinting the bay rather than cutting into the airframe. Photos of the printed bay are still to come.
+Wherever possible, I avoided gluing any avionics component directly to the airframe. Glue is a permanent fix to what is, at this stage, still an iterative design: the avionics suite is going to keep growing and changing as the project moves from maiden flight through tuning and into the companion-computer phase, and every glued-down module is damage to the airframe that has to be undone, or lived with, the next time something changes. Instead I designed a custom 3D-printed avionics bay that mounts the flight controller, GPS modules, telemetry radio, and power module mechanically, with no adhesive anywhere. That keeps the whole suite modular: a future sensor or companion computer can be added, and an existing module swapped or repositioned, by adjusting or reprinting the bay rather than cutting into the airframe.
+
+<div class="gallery">
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/avionics-bay-initial-design.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/believer-fixed-wing/avionics-bay-initial-design.jpg" | relative_url }}" alt="An early avionics mounting design: the RFD900 modem, a power distribution board, and a GPS module mounted on a flat bracket, no airframe yet">
+    </a>
+    <figcaption>An early mounting layout, worked out on the bench before committing to the printed bay design</figcaption>
+  </figure>
+  <figure>
+    <a class="lightbox-trigger" href="{{ "/assets/img/believer-fixed-wing/avionics-bay-current.jpg" | relative_url }}">
+      <img src="{{ "/assets/img/believer-fixed-wing/avionics-bay-current.jpg" | relative_url }}" alt="The current avionics bay inside the airframe, labelled: flight computer (Pixhawk 6X), long range modem, radio receiver, and GPS 1">
+    </a>
+    <figcaption>The current bay, fitted in the airframe, with the flight computer, telemetry modem, receiver, and primary GPS all mechanically mounted</figcaption>
+  </figure>
+</div>
 
 ## A custom mount for the RFD900's antennas
 

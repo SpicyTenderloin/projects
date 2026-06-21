@@ -14,7 +14,25 @@ skills:
 
 ## Tiny Whoops
 
-More to come.
+Tiny whoops take a lot of crash damage for their size, and motors are usually the first thing to go, so replacing one is a routine repair rather than a rare one. Inspecting and reflowing the solder joints under magnification makes the difference between a clean, reliable repair and one that fails again mid-flight.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/tiny-whoop-motor-soldering.jpg" | relative_url }}">
+    <img src="{{ "/assets/img/fpv-drones/tiny-whoop-motor-soldering.jpg" | relative_url }}" alt="Magnified view of a tiny whoop flight controller board, checking the solder joints after a motor replacement">
+  </a>
+  <figcaption>Checking the solder joints under magnification after a motor replacement</figcaption>
+</figure>
+
+## Practicing in the simulator
+
+Acro mode has no self-levelling: the sticks command rotation rates directly, and the pilot is fully responsible for attitude, so building that muscle memory in a simulator first is far cheaper than doing it over real hardware. I use a Radiomaster transmitter bound directly to a laptop simulator to practice freestyle and racing lines before flying them for real.
+
+<figure>
+  <a class="lightbox-trigger" href="{{ "/assets/img/fpv-drones/fpv-simulator-practice.png" | relative_url }}">
+    <img src="{{ "/assets/img/fpv-drones/fpv-simulator-practice.png" | relative_url }}" alt="Holding a Radiomaster transmitter in front of a laptop running an FPV drone simulator, flying a simulated course over a city">
+  </a>
+  <figcaption>Practicing acro-mode flying in a simulator before taking it to real hardware</figcaption>
+</figure>
 
 ## SpeedyBee 5" Drone
 
