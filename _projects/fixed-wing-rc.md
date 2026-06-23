@@ -7,7 +7,6 @@ thumbnail: /assets/img/fixed-wing-rc/thumbnail.jpg
 skills:
   - RC Aircraft
   - Flight Testing
-  - PCB Design
 ---
 
 <figure>
@@ -19,4 +18,4 @@ skills:
 
 This page will document RC fixed-wing builds, repairs, and flying done as a personal hobby, separate from the larger UAS work covered under Believer. Build logs and flight photos to come.
 
-<p class="text-dim">Last updated: 2026-06-22</p>
+<p class="text-dim">Last updated: 2026-06-23</p>
