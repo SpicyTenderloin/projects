@@ -1,7 +1,7 @@
 title: Julian Williams
 description: Undergraduate Electrical & Aerospace Engineer
-baseurl: "/portfolio"
-url: "https://spicytenderloin.github.io"
+baseurl: ""
+url: "https://www.julianw.io"
 
 collections:
   projects:
